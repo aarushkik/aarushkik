@@ -1,65 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title description">
   <title id="title">Aarush Kikkuru</title>
-  <desc id="description">A dark blue and violet banner for Aarush Kikkuru, a tenth-grade student, builder, and curious mind.</desc>
+  <desc id="description">An animated dark blue and violet banner for Aarush Kikkuru, a tenth-grade student, builder, and curious mind.</desc>
 
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#050914"/>
-      <stop offset="0.55" stop-color="#0b1224"/>
-      <stop offset="1" stop-color="#11102a"/>
+      <stop offset="0" stop-color="#050914" />
+      <stop offset="0.52" stop-color="#0a1224" />
+      <stop offset="1" stop-color="#15102d" />
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="0.5" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#22d3ee" />
+      <stop offset="0.5" stop-color="#38bdf8" />
+      <stop offset="1" stop-color="#a78bfa" />
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#38bdf8" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
     </linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.32"/>
-      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0" />
     </radialGradient>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
-      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity="0.065" stroke-width="1" />
     </pattern>
-    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
+    <filter id="soft-glow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="360" rx="22" />
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="360" rx="24" fill="url(#background)"/>
-  <rect width="1200" height="360" rx="24" fill="url(#grid)"/>
-  <circle cx="1020" cy="95" r="250" fill="url(#glow)"/>
-  <circle cx="175" cy="330" r="230" fill="url(#glow)" opacity="0.6"/>
+  <style>
+    .intro { animation: intro 900ms cubic-bezier(.2,.8,.2,1) both; }
+    .intro-delay { animation-delay: 180ms; }
+    .node { animation: pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .node-b { animation-delay: 700ms; }
+    .node-c { animation-delay: 1.4s; }
+    .signal { stroke-dasharray: 90 380; animation: signal 5s linear infinite; }
+    .scanline { animation: scanline 8s ease-in-out infinite; }
+    .cursor { animation: blink 1s steps(1, end) infinite; }
+    .wave { animation: wave 4s ease-in-out infinite; }
 
-  <g fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.55">
-    <path d="M70 92h120l38 38h90"/>
-    <path d="M1130 78h-110l-42 42h-76"/>
-    <path d="M92 245h82l31-31h74"/>
-    <path d="M1105 236h-95l-28-28h-70"/>
+    @keyframes intro {
+      from { transform: translateY(10px); }
+      to { transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .45; transform: scale(.8); }
+      50% { opacity: 1; transform: scale(1.35); }
+    }
+    @keyframes signal {
+      to { stroke-dashoffset: -470; }
+    }
+    @keyframes scanline {
+      0%, 12% { transform: translateX(-320px); opacity: 0; }
+      25%, 70% { opacity: 1; }
+      88%, 100% { transform: translateX(1520px); opacity: 0; }
+    }
+    @keyframes blink {
+      0%, 45% { opacity: 1; }
+      46%, 100% { opacity: 0; }
+    }
+    @keyframes wave {
+      0%, 100% { opacity: .48; transform: translateY(0); }
+      50% { opacity: .9; transform: translateY(-3px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .intro, .node, .signal, .scanline, .cursor, .wave { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#background)" />
+    <rect width="1200" height="360" fill="url(#grid)" />
+    <circle cx="1040" cy="70" r="260" fill="url(#glow)" />
+    <circle cx="140" cy="340" r="230" fill="url(#glow)" opacity="0.62" />
+    <rect class="scanline" x="-320" y="0" width="260" height="360" fill="url(#scan)" />
+
+    <g fill="#8b9bb4" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13" letter-spacing="1.5">
+      <text x="64" y="54">PROFILE // AARUSHKIK</text>
+      <text x="1136" y="54" text-anchor="end">STATUS // LEARNING</text>
+    </g>
+
+    <g fill="none" stroke="#334766" stroke-width="2" opacity="0.8">
+      <path d="M62 104h112l38 38h103" />
+      <path d="M1138 104h-112l-38 38h-103" />
+      <path d="M84 244h92l30-30h94" />
+      <path d="M1116 244h-92l-30-30h-94" />
+    </g>
+    <g class="signal" fill="none" stroke="url(#accent)" stroke-width="2.5" opacity="0.9">
+      <path pathLength="470" d="M62 104h112l38 38h103" />
+      <path pathLength="470" d="M1138 104h-112l-38 38h-103" />
+      <path pathLength="470" d="M84 244h92l30-30h94" />
+      <path pathLength="470" d="M1116 244h-92l-30-30h-94" />
+    </g>
+
+    <g fill="#38bdf8" filter="url(#soft-glow)">
+      <circle class="node" cx="62" cy="104" r="4" />
+      <circle class="node node-b" cx="315" cy="142" r="4" />
+      <circle class="node node-c" cx="1138" cy="104" r="4" />
+      <circle class="node" cx="885" cy="142" r="4" />
+      <circle class="node node-b" cx="84" cy="244" r="4" />
+      <circle class="node node-c" cx="300" cy="214" r="4" />
+      <circle class="node" cx="1116" cy="244" r="4" />
+      <circle class="node node-b" cx="900" cy="214" r="4" />
+    </g>
+
+    <g class="intro">
+      <text x="600" y="147" text-anchor="middle" fill="url(#accent)" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="62" font-weight="700" letter-spacing="2">AARUSH KIKKURU</text>
+      <rect x="363" y="164" width="474" height="2" rx="1" fill="url(#accent)" opacity="0.8" />
+    </g>
+    <g class="intro intro-delay">
+      <text x="600" y="201" text-anchor="middle" fill="#d8e2f0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="3">STUDENT  •  DEVELOPER  •  PROBLEM SOLVER</text>
+    </g>
+
+    <g transform="translate(414 231)">
+      <g class="intro intro-delay">
+        <rect width="372" height="52" rx="12" fill="#0c162a" stroke="#38bdf8" stroke-opacity="0.42" />
+        <circle cx="27" cy="26" r="5" fill="#22d3ee" filter="url(#soft-glow)" />
+        <text x="55" y="32" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="15" letter-spacing="1">LEARN / BUILD / ITERATE</text>
+        <rect class="cursor" x="338" y="16" width="2" height="20" fill="#a78bfa" />
+      </g>
+    </g>
+
+    <path d="M0 319C220 278 375 356 606 325C840 293 1017 345 1200 306V360H0Z" fill="#0a1429" opacity="0.98" />
+    <path class="wave" d="M0 335C230 294 398 368 631 337C850 308 1028 350 1200 321" fill="none" stroke="url(#accent)" stroke-width="3" />
   </g>
-  <g fill="#38bdf8" filter="url(#soft-glow)">
-    <circle cx="70" cy="92" r="4"/>
-    <circle cx="318" cy="130" r="4"/>
-    <circle cx="1130" cy="78" r="4"/>
-    <circle cx="902" cy="120" r="4"/>
-    <circle cx="92" cy="245" r="4"/>
-    <circle cx="279" cy="214" r="4"/>
-    <circle cx="1105" cy="236" r="4"/>
-    <circle cx="912" cy="208" r="4"/>
-  </g>
-
-  <text x="600" y="145" text-anchor="middle" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="750" letter-spacing="3">AARUSH KIKKURU</text>
-  <text x="600" y="194" text-anchor="middle" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="4">10TH-GRADE STUDENT  •  BUILDER  •  CURIOUS MIND</text>
-
-  <g transform="translate(422 229)">
-    <rect width="356" height="54" rx="27" fill="#0d162b" stroke="#38bdf8" stroke-opacity="0.45"/>
-    <circle cx="28" cy="27" r="5" fill="#22d3ee" filter="url(#soft-glow)"/>
-    <text x="178" y="34" text-anchor="middle" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" letter-spacing="1">LEARN  /  BUILD  /  ITERATE</text>
-  </g>
-
-  <path d="M0 318 C210 275 360 360 600 324 C820 291 1000 339 1200 302 V360 H0 Z" fill="#0b1329" opacity="0.96"/>
-  <path d="M0 334 C230 292 395 372 635 335 C850 302 1030 351 1200 319" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.65"/>
 </svg>

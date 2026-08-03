@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/header.svg" width="100%" alt="Aarush Kikkuru: 10th-grade student, builder, and curious mind" />
+  <img src="./assets/header.svg?v=2" width="100%" alt="Animated banner for Aarush Kikkuru: 10th-grade student, builder, and curious mind" />
 </div>
 
 <div align="center">
@@ -33,14 +33,23 @@ These are the questions guiding what I study and build:
 
 ## Tools I’m learning with
 
-These technologies help me turn lessons and ideas into small projects:
+These technologies help me turn lessons and ideas into small projects. I’m learning them through practice, not collecting labels:
 
 <div align="center">
+  <strong>Languages and web</strong>
+  <br /><br />
   <img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&amp;logo=python&amp;logoColor=38BDF8" alt="Python" />
   <img src="https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&amp;logo=typescript&amp;logoColor=3178C6" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/C-0D1117?style=for-the-badge&amp;logo=c&amp;logoColor=A8B9CC" alt="C" />
+  <img src="https://img.shields.io/badge/C%23-0D1117?style=for-the-badge&amp;logo=dotnet&amp;logoColor=512BD4" alt="C sharp" />
   <img src="https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&amp;logo=html5&amp;logoColor=E34F26" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&amp;logo=css3&amp;logoColor=38BDF8" alt="CSS3" />
+  <img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&amp;logo=css&amp;logoColor=1572B6" alt="CSS3" />
+  <br /><br />
+  <strong>Developer tools</strong>
+  <br /><br />
   <img src="https://img.shields.io/badge/Git-0D1117?style=for-the-badge&amp;logo=git&amp;logoColor=F05032" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&amp;logo=github&amp;logoColor=FFFFFF" alt="GitHub" />
   <img src="https://img.shields.io/badge/VS%20Code-0D1117?style=for-the-badge&amp;logo=visualstudiocode&amp;logoColor=22D3EE" alt="Visual Studio Code" />
 </div>
 
@@ -59,10 +68,10 @@ These cards update as I publish more work:
 
 <div align="center">
   <a href="https://github.com/aarushkik">
-    <img height="170" src="https://github-stats-extended.vercel.app/api?username=aarushkik&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=38BDF8&amp;icon_color=A78BFA&amp;text_color=C9D1D9" alt="Aarush's GitHub statistics" />
+    <img width="49%" src="https://github-stats-extended.vercel.app/api?username=aarushkik&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=38BDF8&amp;icon_color=A78BFA&amp;text_color=C9D1D9" alt="Aarush's GitHub statistics" />
   </a>
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
-    <img height="170" src="https://streak-stats.demolab.com?user=aarushkik&amp;hide_border=true&amp;background=0D1117&amp;ring=38BDF8&amp;fire=A78BFA&amp;currStreakNum=C9D1D9&amp;sideNums=C9D1D9&amp;currStreakLabel=38BDF8&amp;sideLabels=8B949E&amp;dates=8B949E&amp;stroke=30363D" alt="Aarush's GitHub contribution streak" />
+    <img width="49%" src="https://streak-stats.demolab.com?user=aarushkik&amp;hide_border=true&amp;background=0D1117&amp;ring=38BDF8&amp;fire=A78BFA&amp;currStreakNum=C9D1D9&amp;sideNums=C9D1D9&amp;currStreakLabel=38BDF8&amp;sideLabels=8B949E&amp;dates=8B949E&amp;stroke=30363D" alt="Aarush's GitHub contribution streak" />
   </a>
 </div>
 
