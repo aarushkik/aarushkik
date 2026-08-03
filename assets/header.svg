@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Aarush Kikkuru</title>
+  <desc id="description">A dark blue and violet banner for Aarush Kikkuru, a tenth-grade student, builder, and curious mind.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050914"/>
+      <stop offset="0.55" stop-color="#0b1224"/>
+      <stop offset="1" stop-color="#11102a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="24" fill="url(#grid)"/>
+  <circle cx="1020" cy="95" r="250" fill="url(#glow)"/>
+  <circle cx="175" cy="330" r="230" fill="url(#glow)" opacity="0.6"/>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.55">
+    <path d="M70 92h120l38 38h90"/>
+    <path d="M1130 78h-110l-42 42h-76"/>
+    <path d="M92 245h82l31-31h74"/>
+    <path d="M1105 236h-95l-28-28h-70"/>
+  </g>
+  <g fill="#38bdf8" filter="url(#soft-glow)">
+    <circle cx="70" cy="92" r="4"/>
+    <circle cx="318" cy="130" r="4"/>
+    <circle cx="1130" cy="78" r="4"/>
+    <circle cx="902" cy="120" r="4"/>
+    <circle cx="92" cy="245" r="4"/>
+    <circle cx="279" cy="214" r="4"/>
+    <circle cx="1105" cy="236" r="4"/>
+    <circle cx="912" cy="208" r="4"/>
+  </g>
+
+  <text x="600" y="145" text-anchor="middle" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="750" letter-spacing="3">AARUSH KIKKURU</text>
+  <text x="600" y="194" text-anchor="middle" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="4">10TH-GRADE STUDENT  •  BUILDER  •  CURIOUS MIND</text>
+
+  <g transform="translate(422 229)">
+    <rect width="356" height="54" rx="27" fill="#0d162b" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <circle cx="28" cy="27" r="5" fill="#22d3ee" filter="url(#soft-glow)"/>
+    <text x="178" y="34" text-anchor="middle" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" letter-spacing="1">LEARN  /  BUILD  /  ITERATE</text>
+  </g>
+
+  <path d="M0 318 C210 275 360 360 600 324 C820 291 1000 339 1200 302 V360 H0 Z" fill="#0b1329" opacity="0.96"/>
+  <path d="M0 334 C230 292 395 372 635 335 C850 302 1030 351 1200 319" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.65"/>
+</svg>
