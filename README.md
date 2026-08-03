@@ -70,8 +70,8 @@ These cards update as I publish more work:
   <a href="https://github.com/aarushkik">
     <img width="49%" src="https://github-stats-extended.vercel.app/api?username=aarushkik&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=38BDF8&amp;icon_color=A78BFA&amp;text_color=C9D1D9" alt="Aarush's GitHub statistics" />
   </a>
-  <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
-    <img width="49%" src="https://streak-stats.demolab.com?user=aarushkik&amp;hide_border=true&amp;background=0D1117&amp;ring=38BDF8&amp;fire=A78BFA&amp;currStreakNum=C9D1D9&amp;sideNums=C9D1D9&amp;currStreakLabel=38BDF8&amp;sideLabels=8B949E&amp;dates=8B949E&amp;stroke=30363D" alt="Aarush's GitHub contribution streak" />
+  <a href="https://github.com/aarushkik?tab=repositories">
+    <img width="49%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=aarushkik&amp;layout=compact&amp;langs_count=8&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=38BDF8&amp;text_color=C9D1D9" alt="Languages used across Aarush's public repositories" />
   </a>
 </div>
 
